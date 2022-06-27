@@ -8,10 +8,11 @@ const App = () => {
         const fetchData = async () => {
             const api = await fetch('http://localhost:3001/solutions');
             const json = await api.json();
-            const randomSolution = json[Math.floor(Math.random() * json.length)]; // random int between 0 and 14
+            const randomSolution = json[Math.floor(Math.random() * json.length)];
 
             setSolution(randomSolution.word);
         };
+
         fetchData();
     }, [setSolution]);
 

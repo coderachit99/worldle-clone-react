@@ -11,8 +11,12 @@ const Wordle = ({ solution }) => {
             window.removeEventListener('keyup', handleKeyUp);
         };
     }, [handleKeyUp]);
-
-    return <div>Wordle</div>;
+    // test comment
+    return (
+        <div>
+            <div>solution - {solution}</div>
+            <div>Current Guess - {currentGuess}</div>
+        </div>
+    );
 };
-
 export default Wordle;
